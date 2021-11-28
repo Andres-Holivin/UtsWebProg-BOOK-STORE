@@ -1,0 +1,17 @@
+php artisan make:Controller Home
+php artisan make:migration create_category
+php artisan make:migration create_books
+php artisan make:migration create_details
+php artisan migrate
+
+php artisan make:model Book --seed
+php artisan make:model Category --seed
+php artisan make:model Detail --seed
+
+php artisan db:seed --class=CategorySeeder
+php artisan db:seed --class=BookSeeder
+php artisan db:seed --class=DetailSeeder
+
+
+
+php artisan migrate:refresh 
